@@ -1,4 +1,5 @@
 # Infrastructure Runbooks
+[![CI](https://github.com/uMax-Cyber/OpsPlaybook/actions/workflows/ci.yml/badge.svg)](https://github.com/uMax-Cyber/OpsPlaybook/actions/workflows/ci.yml)
 
 Production-tested operational runbooks for homelab/enterprise infrastructure: Proxmox VE, UniFi networking, Sophos firewalls, and AI-agent operations. Each runbook documents the exact procedure, common traps, and verification steps — learned from real incidents.
 
