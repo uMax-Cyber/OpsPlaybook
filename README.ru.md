@@ -6,11 +6,20 @@
 
 # OpsPlaybook — Production Runbooks
 
-Операционные руководства: создание VM, диагностика Wi-Fi, настройка syslog — с реальными уроками инцидентов.
+Production runbook'и: создание VM, диагностика Wi-Fi, syslog setup — с реальными уроками инцидентов и шагами верификации.
 
 ## Скриншот
 
 ![Демонстрация](screenshots/demo.svg)
 
-## Лицензия
-MIT
+## 📬 Контакты
+
+Вопросы? Пишите: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
+
+---
+
+<div align="center">
+
+**🇬🇧 [English](README.md) · 🇷🇺 [Русский](README.ru.md) · 🇺🇿 [Oʻzbekcha](README.uz.md)**
+
+</div>
