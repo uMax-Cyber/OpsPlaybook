@@ -6,60 +6,60 @@
 
 </div>
 
-# Infratuzilma runbook lari
+# Infratuzilma runbooklari
 
 [![CI](https://github.com/uMax-Cyber/OpsPlaybook/actions/workflows/ci.yml/badge.svg)](https://github.com/uMax-Cyber/OpsPlaybook/actions/workflows/ci.yml)
 
 
 ![Namoyish](screenshots/demo.svg)
-Homelab/korporativ infratuzilma uchun ishlab chiqarishda sinovdan oʻtgan operatsion runbook lar: Proxmox VE, UniFi tarmoqlari, Sophos fayrvollari va AI agentlar ekspluatatsiyasi. Har bir runbook aniq tartibni, tipik tuzoqlarni va tekshirish qadamlarini hujjatlashtiradi — barchasi haqiqiy hodisalardan olingan.
+Homelab va korporativ infratuzilma uchun productionda sinovdan oʻtgan operatsion runbooklar: Proxmox VE, UniFi tarmoq, Sophos fayrvol va AI agent ekspluatatsiyasi. Har bir runbookda aniq tartib, tipik tuzoqlar va tekshirish qadamlari bor — barchasi haqiqiy hodisalardan olingan saboqlar.
 
-## Falsafa
+## Tamoyil
 
-Har bir runbook bir xil tuzilishga amal qiladi:
-1. **Nima** — bajarilayotgan operatsiya
-2. **Nega** — bu qachon kerak boʻladi
+Har bir runbook bir xil tuzilishda yozilgan:
+1. **Nima** — bajariladigan operatsiya
+2. **Nega** — qachon kerak boʻladi
 3. **Qadamlar** — aniq buyruqlar, tartib bilan
 4. **Tekshirish** — muvaffaqiyatni qanday tasdiqlash
-5. **Tuzoqlar** — sodir boʻlgan haqiqiy muvaffaqiyatsizliklar, siz takrorlamasligingiz uchun
+5. **Tuzoqlar** — bizda roʻy bergan xatolar, siz takrorlamasligingiz uchun
 
 ## Mundarija
 
 ### 🖥 Sysadmin
-- [VM yaratish runbook i](sysadmin/vm-creation.md) — golden template bilan cloud-init provizioning
-- [Disk kattalashtirish runbook i](sysadmin/disk-resize.md) — ikki bosqichli onlayn kattalashtirish
-- [SSH tiklash runbook i](sysadmin/ssh-recovery.md) — VM qayta yaratilgandan keyin cloudimg SSH ni tuzatish
+- [VM yaratish runbooki](sysadmin/vm-creation.md) — golden template bilan cloud-init provizioning
+- [Diskni kattalashtirish runbooki](sysadmin/disk-resize.md) — onlayn, ikki bosqichda
+- [SSH tiklash runbooki](sysadmin/ssh-recovery.md) — VM qayta yaratilgach cloudimg SSHsini tuzatish
 
 ### 🌐 Tarmoq
-- [Wi-Fi diagnostikasi runbook i](network/wifi-diagnosis.md) — yuqoridan pastga metodologiya (avval DHCP)
-- [DHCP pulini tekshirish](network/dhcp-pool.md) — «ulanmoqda...» muammolarining 1-sababi
-- [Port auditi tartibi](network/port-audit.md) — anomaliyalarni aniqlash bilan toʻliq kommutator inventarizatsiyasi
-- [Topologiya xaritalash](network/topology-mapping.md) — API dan tarmoq daraxtini qurish
+- [Wi-Fi diagnostika runbooki](network/wifi-diagnosis.md) — yuqoridan pastga metodika (avval DHCP)
+- [DHCP poolini tekshirish](network/dhcp-pool.md) — "ulanmoqda..." muammosining 1-sababi
+- [Port audit tartibi](network/port-audit.md) — anomaliyalarni aniqlash bilan kommutatorlarning toʻliq inventarizatsiyasi
+- [Topologiya xaritalash](network/topology-mapping.md) — API asosida tarmoq daraxtini qurish
 
 ### 🔒 Xavfsizlik
-- [Haftalik xavfsizlik auditi](security/weekly-audit.md) — avtomatlashtirilgan tekshiruv roʻyxati
-- [Syslog sozlash](security/syslog-setup.md) — barcha tarmoq qurilmalaridan markazlashtirilgan jurnallov
+- [Haftalik xavfsizlik auditi](security/weekly-audit.md) — avtomatlashtirilgan checklist
+- [Syslog sozlash](security/syslog-setup.md) — barcha tarmoq qurilmalaridan markazlashgan log
 
 ## Stack
-- Proxmox VE 9.x (3 ta mustaqil tugun)
+- Proxmox VE 9.x (3 ta alohida tugun)
 - UniFi Controller (96 ta boshqariladigan qurilma)
-- Sophos Firewall (2 ta shlyuz, XML API)
-- Python + Bash (faqat stdlib)
-- Markazlashtirilgan jurnallov uchun rsyslog
+- Sophos Firewall (2 ta gateway, XML API)
+- Python + Bash (faqat standart kutubxona)
+- Markazlashgan log uchun rsyslog
 
-## Nega runbook lar?
+## Runbook nima uchun kerak?
 
-Infratuzilma oldindan aytiladigan usullarda buziladi. Bir xil 5 ta tuzoq VM provizioning muvaffaqiyatsizliklarining 80% ini keltirib chiqaradi. Bir xil 3 ta muammo Wi-Fi shikoyatlarining katta qismini tashkil qiladi. Bularni hujjatlashtirish shuni anglatadi:
-- Yangi jamoa aʼzolari tezroq kirishadi
-- Tunda soat 3 dagi hodisalar disk raskadrovkasi emas, qadamlarga amal qilish bilan hal qilinadi
-- AI agentlar tartiblarga ishonchli amal qilishi mumkin
+Infratuzilma odatda oldindan koʻrinadigan tarzda buziladi: VM provizioningdagi ishdan chiqishlarning 80%i oʻsha 5 ta tuzoqdan, Wi-Fi shikoyatlarining koʻpi esa oʻsha 3 ta muammodan keladi. Bularni hujjatlashtirish:
+- Yangi jamoa aʼzosi ishga tez kirishib ketadi
+- Kechasi soat 3 dagi hodisa disk raskadrovka bilan emas, qadam-baqadam yurib hal boʻladi
+- AI agent tartibga ishonch bilan amal qiladi
 
 ## Litsenziya
 MIT
 
 ## 📬 Aloqa
 
-Savollaringiz bormi? Yozing: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
+Savol boʻlsa yozing: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
 
 ---
 
